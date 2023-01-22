@@ -1,0 +1,19 @@
+<div class="Box">
+<h1>new action</h1>
+<label>accountNumber:</label><br/>
+<input type="number" formControlName="accountNumber" #accountNumber /><br/>
+<label>action:</label><br/>
+<input type="number" formControlName="types" #types /><br/>
+<!-- <select matNativeControl(change)="selectChangeHandler($event) >
+    <option value="" selected></option>
+    <option *ngFor="let item of myTypes" [value]="item.types">{{item.types}}</option>
+  </select><br/> -->
+<label>sum:</label><br/>
+<input type="number" formControlName="sum" #sum /><br/>
+<label>interest:</label><br/>
+<input type="number" formControlName="interest" #interest /><br/>
+<label>sum_payments:</label><br/>
+<input type="number" formControlName="sum_payments" #sum_payments /><br/><br/>
+<!-- add new action -->
+<button (click)="addAction(+accountNumber.value, +types.value , +sum.value,+interest.value,+sum_payments.value)">new action</button>
+</div>

@@ -1,0 +1,29 @@
+<label>Your account:</label>
+<input type="number" class="form-control-sm" formControlName="account" #account /><br/>
+<button class="btn btn-primary" (click)="getActions(+account.value)">show</button>
+
+
+<h1>All actions by account </h1>
+
+<table class="table table-striped">
+    <thead>
+        <th scope="col">id</th>
+        <th scope="col">account num</th>
+        <th scope="col">action</th>
+        <th scope="col">sum</th>
+        <th scope="col">date</th>
+        <th scope="col">interest</th>
+        <th scope="col">sum_payments</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of myAccount">
+            <td>{{ item.objectId}}</td>
+            <td>{{ item.accountNumber }}</td>
+            <td>{{ item.types }} </td>
+            <td>{{ item.sum }}</td>
+            <td>{{ item.date }}</td>
+            <td>{{ item.interest }} </td>
+            <td>{{ item.sum_payments }}</td>
+        </tr>
+    </tbody>
+</table>
